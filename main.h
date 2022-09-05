@@ -5,6 +5,8 @@
 
 #ifndef COMMANDLINE_MAIN_H
     #define COMMANDLINE_MAIN_H
+    #define ROWS 3
+    #define COLUMNS 3
 
     #include <iostream>
     #include "functions.h"

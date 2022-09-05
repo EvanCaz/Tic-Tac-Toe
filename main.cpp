@@ -5,8 +5,12 @@
 
 #include "main.h"
 
-
 int main() {
-    cout << "hello";
-    printtest();
+    cout << "Test output" << endl;
+    char board[ROWS][COLUMNS] = {{'*','*','*'}, {'*','*','*'}, {'*','*','*'}};
+    displayBoard(board);
+
+
+
+    
 }
