@@ -13,6 +13,7 @@
     using std::endl;
 
     void displayBoard(char[ROWS][COLUMNS]);
-    void playerTurn(std::string, int);
+    void playerTurn(std::string, int, char[ROWS][COLUMNS]);
+    bool winner(char[ROWS][COLUMNS]);
 
 #endif //COMMANDLINE_FUNCTIONS_H
