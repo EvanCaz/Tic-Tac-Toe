@@ -5,14 +5,14 @@
 
 #ifndef COMMANDLINE_FUNCTIONS_H
     #define COMMANDLINE_FUNCTIONS_H
-    #define ROWS 3
-    #define COLUMNS 3
 
     #include <iostream>
+    #include "main.h" // for const var
 
     using std::cout;
     using std::endl;
 
-    char displayBoard(char[ROWS][COLUMNS]);
+    void displayBoard(char[ROWS][COLUMNS]);
+    void playerTurn(std::string, int);
 
 #endif //COMMANDLINE_FUNCTIONS_H

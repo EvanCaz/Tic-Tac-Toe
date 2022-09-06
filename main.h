@@ -13,5 +13,6 @@
 
     using std::cout;
     using std::endl;
+    using std::cin;
 
 #endif //COMMANDLINE_MAIN_H
