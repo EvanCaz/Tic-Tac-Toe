@@ -6,7 +6,7 @@
 #include "functions.h"
 
 void displayBoard(char board[ROWS][COLUMNS]){
-    cout << "  | 0 | 1 | 2 |" << endl;
+    cout << " | 0 | 1 | 2 |" << endl;
     for(int i=0;i<3;i++){
         cout << "---------------" << endl;
         cout << i;
@@ -63,16 +63,23 @@ bool winner(char board[ROWS][COLUMNS]){
             x = 1;
         }
     }
-    if(board[0][0] == board[1][1] && board[1][1] == board[2][2]){
+    if(board[0][0] == 'x' && board[1][1] == 'x' && board[2][2] == 'x'){ // checks top left-bottom right equality playey1
         x = 1;
-    } else if (board[0][2] == board[1][1] && board[1][1] == board[2][2]){
+    } else if (board[2][0] == 'x' && board[1][1] == 'x' && board[0][2] == 'x'){ // chekcs bottom left-topright for equality player1
         x = 1;
     }
+
+    if(board[0][0] == 'o' && board[1][1] == 'o' && board[2][2] == 'o'){ // checks top left-bottom right equality playey2
+        x = 2;
+    } else if (board[2][0] == 'o' && board[1][1] == 'o' && board[0][2] == 'o'){ // chekcs bottom left-topright for equality player2
+        x = 2;
+    }
+
     for(i=0;i<3;i++){
         if(board[i][0] == 'o' && board[i][1] == 'o' && board[i][2] == 'o'){ // checks all rows for eqaulity plaery2
-            x = 1;
+            x = 2;
         } else if (board[0][i] == 'o' && board[1][i] == 'o' && board[2][i] == 'o'){ // checks all columns for equality player2
-            x = 1;
+            x = 2;
         }
     }
     

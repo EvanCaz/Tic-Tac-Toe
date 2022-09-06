@@ -22,8 +22,11 @@ int main() {
             turn = 2;
         } else {playerTurn(player2, turn, board); turn = 1;}
         gameover = winner(board);
-        cout << gameover;
+        
     }
     displayBoard(board);
-    cout << "We have a winner!";
+    cout << "We have a winner!" << endl;
+    if(gameover == 1){
+        cout << player1 << " won the game." << endl;
+    } else { cout << player2 << " won the game.";}
 }
